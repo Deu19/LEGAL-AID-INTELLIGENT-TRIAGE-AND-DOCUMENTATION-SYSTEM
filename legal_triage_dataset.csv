@@ -1,0 +1,51 @@
+case_text,outcome_label,complexity
+Employee dismissed after reporting safety violations,Needs more evidence,Low
+Custody dispute over minor child after divorce,Needs more evidence,Low
+License suspension due to repeated traffic violations,Settled,Medium
+Notice to vacate issued due to non-payment of utility bills,Settled,Medium
+Spouse seeking divorce settlement and alimony,Settled,Low
+Employee terminated without notice after filing a harassment complaint,Won,High
+Spouse seeking divorce settlement and alimony,Dismissed,Medium
+Parent requesting visitation rights,Won,High
+Traffic fine contested citing medical emergency,Settled,Low
+Illegal eviction notice issued without prior warning,Won,High
+Appeal for dismissal of red-light violation ticket,Settled,High
+License suspension due to repeated traffic violations,Won,Medium
+Traffic fine contested citing medical emergency,Won,High
+Request for restraining order due to domestic violence,Dismissed,Medium
+Driver issued speeding ticket and appeals for dismissal,Won,Medium
+Employee fired for refusing overtime without compensation,Needs more evidence,Low
+Driver issued speeding ticket and appeals for dismissal,Won,High
+Employee fired for refusing overtime without compensation,Settled,Low
+Wrongful termination suit filed after being laid off,Won,Low
+Buyer claims damages after contractor abandoned project,Won,Low
+Job terminated for poor performance without prior warning,Settled,High
+Employee dismissed after reporting safety violations,Needs more evidence,Low
+Employee terminated without notice after filing a harassment complaint,Settled,Medium
+Request for restraining order due to domestic violence,Dismissed,Medium
+Custody dispute over minor child after divorce,Dismissed,High
+Service provider failed to comply with contractual obligations,Dismissed,Medium
+Wrongful termination suit filed after being laid off,Dismissed,High
+Job terminated for poor performance without prior warning,Needs more evidence,High
+Tenant received eviction notice for unpaid rent of three months,Settled,Medium
+Petition for modification of child custody agreement,Settled,High
+Appeal for dismissal of red-light violation ticket,Settled,Low
+Petition for modification of child custody agreement,Won,High
+Landlord threatens eviction after dispute over damages,Needs more evidence,Low
+Breach of service agreement due to delayed delivery,Dismissed,High
+Fine issued for parking violation near restricted zone,Settled,High
+Tenant facing eviction because of late rent payments during pandemic,Won,High
+Fine issued for parking violation near restricted zone,Needs more evidence,Low
+Tenant received eviction notice for unpaid rent of three months,Settled,Medium
+Landlord threatens eviction after dispute over damages,Won,High
+Tenant facing eviction because of late rent payments during pandemic,Settled,Low
+Breach of contract for rental agreement,Dismissed,Low
+Service provider failed to comply with contractual obligations,Settled,Medium
+Illegal eviction notice issued without prior warning,Dismissed,High
+Supplier failed to deliver goods as per contract terms,Dismissed,High
+Breach of contract for rental agreement,Dismissed,Medium
+Breach of service agreement due to delayed delivery,Dismissed,Medium
+Notice to vacate issued due to non-payment of utility bills,Needs more evidence,Low
+Supplier failed to deliver goods as per contract terms,Settled,High
+Buyer claims damages after contractor abandoned project,Dismissed,Medium
+Parent requesting visitation rights,Needs more evidence,Medium
