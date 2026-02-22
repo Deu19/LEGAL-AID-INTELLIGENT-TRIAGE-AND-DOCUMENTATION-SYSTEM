@@ -1,5 +1,3 @@
-# app_flask.py
-
 from flask import Flask, render_template_string, request
 from legal_aid_system import NLPProcessor, TriageModule, DocumentGenerator, RecommendationEngine, SecurityLayer
 import pathlib
@@ -22,7 +20,7 @@ with open("legal_triage_dataset.csv", newline="", encoding="utf-8") as f:
         labels.append(triage.outcome_labels.index(row["outcome_label"]))
 triage.train(texts, labels)
 
-app = Flask(__name__)
+app = Flask(_name_)
 
 # -----------------------------------------------------------------------
 # HTML templates
@@ -48,18 +46,19 @@ INDEX_HTML = """
   </form>
 
   {% if result %}
-    <div class="result">
-      <strong>Plain Summary:</strong> {{ result.summary }}<br>
-      <strong>Predicted Outcome:</strong> {{ result.pred_outcome }} ({{ result.win_prob }} chance)<br>
-      <strong>Complexity:</strong> {{ result.complexity }}<br>
-      <strong>Pro Bono Suggestion:</strong> {{ result.pro_bono }}
-      <br><br>
-      <form method="POST" action="/affidavit">
-        <input type="hidden" name="raw_text" value="{{ result.raw }}">
-        <button type="submit">Generate Affidavit</button>
-      </form>
-    </div>
-  {% endif %}
+  <div class="result">
+    <strong>Plain Summary:</strong> {{ result.summary }}<br>
+    <strong>Predicted Outcome:</strong> {{ result.pred_outcome }} ({{ result.win_prob }} chance)<br>
+    <strong>Complexity:</strong> {{ result.complexity }}<br>
+    <strong>Why this prediction?</strong> {{ result.explanation }}<br>
+    <strong>Pro Bono Suggestion:</strong> {{ result.pro_bono }}
+    <br><br>
+    <form method="POST" action="/affidavit">
+      <input type="hidden" name="raw_text" value="{{ result.raw }}">
+      <button type="submit">Generate Affidavit</button>
+    </form>
+  </div>
+{% endif %}
 </body>
 </html>
 """
@@ -106,13 +105,13 @@ def index():
             tri = triage.predict_outcome(summary)
             rec = rec_engine.match("family", "NY")[0]["name"]
             result = {
-                "raw": case_text,
-                "summary": summary,
-                "pred_outcome": tri.predicted_outcome,
-                "win_prob": f"{tri.win_probability:.0%}",
-                "complexity": tri.complexity,
-                "pro_bono": rec,
-            }
+        "raw": case_text,
+        "summary": summary,
+        "pred_outcome": tri.predicted_outcome,
+        "win_prob": f"{tri.win_probability:.0%}",
+        "complexity": tri.complexity,
+        "pro_bono": rec,
+        "explanation": tri.explanation, }
     return render_template_string(INDEX_HTML, result=result, case_text=case_text)
 
 
@@ -133,5 +132,5 @@ def generate_affidavit():
     return render_template_string(GENERATED_HTML, path=final_path)
 
 
-if __name__ == "__main__":
+if _name_ == "_main_":
     app.run(debug=True)
