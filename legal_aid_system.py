@@ -1,4 +1,6 @@
-from _future_ import annotations
+# app.py
+
+from __future__ import annotations
 
 import csv
 import json
@@ -21,7 +23,7 @@ import joblib
 # SecurityLayer – simple wrapper around Fernet symmetric encryption
 # ---------------------------------------------------------------------------
 class SecurityLayer:
-    def _init_(self, key: Optional[bytes] = None):
+    def __init__(self, key: Optional[bytes] = None):
         self._key = key or Fernet.generate_key()
         self._fernet = Fernet(self._key)
 
@@ -40,7 +42,7 @@ class SecurityLayer:
 # NLPProcessor – handles basic cleaning + embeddings
 # ---------------------------------------------------------------------------
 class NLPProcessor:
-    def _init_(self):
+    def __init__(self):
         self._spacy = spacy.load("en_core_web_sm")
         self._sentiment = pipeline(
             "sentiment-analysis",
@@ -64,7 +66,7 @@ class NLPProcessor:
 # DocumentGenerator – naive template filler
 # ---------------------------------------------------------------------------
 class DocumentGenerator:
-    def _init_(self, template_dir: str = "templates"):
+    def __init__(self, template_dir: str = "templates"):
         self.templates_path = pathlib.Path(template_dir)
         self.templates_path.mkdir(exist_ok=True)
 
@@ -93,13 +95,12 @@ class TriagePrediction:
     complexity: str
     win_probability: float
     predicted_outcome: str
-    explanation: str
 
 
 class TriageModule:
-    def _init_(self, model_path: Union[str, pathlib.Path, None] = None):
+    def __init__(self, model_path: Union[str, pathlib.Path, None] = None):
         self.encoder = SentenceTransformer("all-MiniLM-L6-v2")
-        self.model = LogisticRegression(max_iter=1000)
+        self.model = LogisticRegression(max_iter=1000, multi_class="multinomial")
         self.outcome_labels = [
             "Dismissed",
             "Settled",
@@ -120,52 +121,14 @@ class TriageModule:
 
     def predict_outcome(self, case_text: str) -> TriagePrediction:
         X = self.encoder.encode([case_text], convert_to_tensor=False)
-
         probabilities = self.model.predict_proba(X)[0]
         best_idx = probabilities.argmax()
-
-        predicted_label = self.outcome_labels[best_idx]
-        confidence = probabilities[best_idx]
-
         complexity = self._estimate_complexity(case_text)
-
-        # ---------------------------
-        # Explainable AI logic
-        # ---------------------------
-        explanation = self._generate_explanation(X[0], best_idx)
-
         return TriagePrediction(
             complexity=complexity,
-            win_probability=confidence,
-            predicted_outcome=predicted_label,
-            explanation=explanation,
+            win_probability=probabilities[best_idx],
+            predicted_outcome=self.outcome_labels[best_idx],
         )
-    
-    def _generate_explanation(self, input_vector, class_index):
-   
-        weights = self.model.coef_[class_index]
-
-        # Contribution = weight * feature value
-        contributions = weights * input_vector
-
-        # Get top 5 contributing features
-        top_indices = contributions.argsort()[-5:]
-
-        explanation_parts = []
-
-        for idx in top_indices:
-            weight = weights[idx]
-            if weight > 0:
-                explanation_parts.append("strong semantic alignment with similar past cases")
-            else:
-                explanation_parts.append("lack of strong supporting indicators")
-
-        explanation_text = (
-            f"The prediction is influenced by key semantic patterns detected in the case description, "
-            f"including {', '.join(set(explanation_parts))}."
-        )
-
-        return explanation_text
 
     def _estimate_complexity(self, text: str) -> str:
         word_count = len(text.split())
@@ -187,7 +150,7 @@ class TriageModule:
 # RecommendationEngine – simple metadata filter + rank
 # ---------------------------------------------------------------------------
 class RecommendationEngine:
-    def _init_(self, directory_path: str | pathlib.Path = "providers.json"):
+    def __init__(self, directory_path: str | pathlib.Path = "providers.json"):
         self.dir_path = pathlib.Path(directory_path)
         if self.dir_path.exists():
             with open(self.dir_path, "r", encoding="utf-8") as fp:
@@ -222,7 +185,7 @@ class RecommendationEngine:
 # ChatbotInterface – minimal REPL showcasing full flow
 # ---------------------------------------------------------------------------
 class ChatbotInterface:
-    def _init_(
+    def __init__(
         self,
         nlp: NLPProcessor,
         triage: TriageModule,
@@ -293,7 +256,7 @@ class ChatbotInterface:
 # ---------------------------------------------------------------------------
 # Entry-point
 # ---------------------------------------------------------------------------
-if _name_ == "_main_":
+if __name__ == "__main__":
     nlp = NLPProcessor()
     triage = TriageModule()
     doc_gen = DocumentGenerator()

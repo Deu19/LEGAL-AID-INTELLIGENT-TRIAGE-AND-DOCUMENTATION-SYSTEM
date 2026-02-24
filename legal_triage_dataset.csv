@@ -1,132 +1,51 @@
-Employee terminated after raising wage violation complaint,Won,High
-Wrongful termination during probation period,Needs more evidence,Low
-Employer refused maternity leave benefits,Won,High
-Unpaid bonus dispute after performance review,Settled,Medium
-Alleged workplace harassment without documentation,Needs more evidence,Medium
-Forced resignation due to internal conflict,Dismissed,Low
-Company failed to issue relieving letter,Settled,Low
-Unlawful termination without severance pay,Won,High
-Suspension without disciplinary hearing,Dismissed,Medium
-Employment contract breach over salary revision,Settled,Medium
-Employee demoted without explanation,Needs more evidence,Low
-Retaliation after reporting discrimination,Won,High
-Dispute over unpaid commissions,Settled,Medium
-Termination following medical absence,Needs more evidence,Medium
-Improper background check leading to job loss,Dismissed,Low
-Child custody dispute citing financial instability,Needs more evidence,Medium
-Request for increased visitation rights,Settled,Low
-Custody modification after relocation,Won,High
-Spousal support disagreement post-divorce,Dismissed,Medium
-Alleged concealment of assets in divorce,Won,High
-Guardianship petition after parental death,Settled,High
-Emergency custody hearing request,Won,High
-Petition to reduce alimony payments,Needs more evidence,Low
-Dispute over child education expenses,Settled,Medium
-Joint custody disagreement,Dismissed,Medium
-Tenant eviction due to subletting violation,Needs more evidence,Medium
-Landlord failed to repair essential utilities,Won,High
-Illegal rent increase without notice,Won,Medium
-Security deposit refund dispute,Settled,Low
-Tenant accused of property damage,Dismissed,Medium
-Eviction due to unauthorized occupants,Settled,Medium
-Lease termination disagreement,Needs more evidence,Low
-Failure to provide agreed amenities in rental,Won,Medium
-Unlawful lockout by landlord,Won,High
-Tenant dispute over maintenance charges,Dismissed,Low
-Breach of contract for delayed construction,Settled,Medium
-Non-payment for delivered goods,Won,Medium
-Dispute over service quality under agreement,Needs more evidence,Low
-Cancellation of agreement without refund,Dismissed,Medium
-Supplier contract termination disagreement,Settled,Low
-Failure to meet project deadlines,Won,High
-Refund dispute for defective product,Settled,Low
-Contract clause interpretation conflict,Dismissed,Medium
-Non-performance of consultancy agreement,Needs more evidence,High
-Penalty imposed for late delivery breach,Settled,Medium
-Speeding ticket issued without radar proof,Won,Medium
-Driving without valid documentation dispute,Dismissed,Low
-Red light violation appeal request,Settled,Medium
-Parking ticket issued in private property,Won,Low
-License suspension due to unpaid fines,Settled,High
-DUI allegation without breathalyzer evidence,Needs more evidence,High
-Vehicle impound dispute,Dismissed,Medium
-Traffic fine for expired permit,Settled,Low
-Disputed lane violation penalty,Won,Medium
-Unauthorized towing of parked vehicle,Won,High
-Unpaid overtime claim after resignation,Settled,Medium
-Employee termination for social media post,Dismissed,Low
-Promotion denied despite eligibility,Needs more evidence,Medium
-Workplace injury compensation claim,Won,High
-Employer refusal to provide experience certificate,Settled,Low
-Salary withheld during notice period,Won,Medium
-Dispute over gratuity payment,Settled,Medium
-Work contract terminated before completion,Needs more evidence,Low
-Unlawful background termination record,Dismissed,Medium
-Employee transferred without consent,Settled,Low
-Child custody disagreement due to remarriage,Needs more evidence,Medium
-Petition for sole guardianship,Dismissed,High
-Non-compliance with visitation schedule,Settled,Medium
-Financial neglect allegations in custody case,Won,High
-Spouse disputing maintenance calculation,Dismissed,Medium
-Modification of custody terms request,Settled,Low
-Relocation dispute impacting visitation,Needs more evidence,High
-Tenant dispute over shared utility bills,Settled,Low
-Eviction for alleged nuisance complaint,Dismissed,Medium
-Rent payment delay due to financial hardship,Needs more evidence,Low
-Failure to renew lease agreement,Settled,Medium
-Property damage dispute between tenant and landlord,Won,High
-Unauthorized eviction notice,Won,High
-Lease violation due to pet policy,Settled,Low
-Security deposit deduction disagreement,Dismissed,Medium
-Unreturned advance rent payment,Won,Medium
-Landlord harassment complaint,Needs more evidence,High
-Contract cancellation due to mutual misunderstanding,Settled,Low
-Failure to honor warranty clause,Won,Medium
-Non-delivery of prepaid goods,Dismissed,Medium
-Breach of partnership agreement,Settled,High
-Delayed payment under supply contract,Needs more evidence,Medium
-Construction agreement dispute over materials,Won,High
-Refund refusal for cancelled subscription,Settled,Low
-Contract signed under alleged coercion,Dismissed,High
-Incomplete service delivery claim,Settled,Medium
-Insurance claim denial under contract,Won,High
-Traffic citation due to unclear signage,Won,Low
-Penalty for overloaded vehicle dispute,Settled,Medium
-Driving license renewal rejection appeal,Dismissed,Low
-Challenging automated traffic violation notice,Needs more evidence,Medium
-Appeal against reckless driving accusation,Won,High
-Vehicle registration suspension disagreement,Settled,Medium
-Illegal parking fine issued wrongly,Won,Low
-Seatbelt violation dispute,Dismissed,Low
-Insurance lapse leading to penalty dispute,Settled,Medium
-Suspension of heavy vehicle permit appeal,Needs more evidence,High
-Employee dismissed after union membership,Won,High
-Wrongful layoff during company downsizing,Settled,Medium
-Refusal to grant paternity leave,Dismissed,Medium
-Unlawful termination without written contract,Won,High
-Unpaid salary for probation period,Settled,Low
-Workplace discrimination based on age,Needs more evidence,High
-Non-payment of statutory benefits,Won,Medium
-Employee grievance unresolved by HR,Settled,Low
-Dispute over employment bond agreement,Dismissed,Medium
-Termination due to alleged misconduct,Needs more evidence,Medium
-Child custody disagreement over schooling decision,Settled,Medium
-Alimony payment default enforcement request,Won,High
-Petition to revoke guardianship,Dismissed,High
-Visitation denial due to relocation,Needs more evidence,Medium
-Property settlement disagreement after divorce,Settled,Low
-Tenant eviction during ongoing dispute,Won,High
-Rent increase beyond agreed limit,Dismissed,Medium
-Illegal property seizure by landlord,Won,High
-Security deposit dispute after inspection,Settled,Low
-Lease breach due to renovation dispute,Needs more evidence,Medium
-Supplier contract non-compliance,Settled,Medium
-Failure to provide contracted training services,Dismissed,Low
-Refund claim after service dissatisfaction,Won,Medium
-Termination of franchise agreement dispute,Needs more evidence,High
-Non-payment of contractor invoice,Settled,Medium
-Disputed highway toll violation notice,Won,Low
-License revocation due to clerical error,Settled,High
-Appeal against parking violation in reserved area,Dismissed,Low
-Traffic violation recorded by faulty camera,Won,Medium
-Penalty for missing emission test deadline,Needs more evidence,Low
+case_text,outcome_label,complexity
+Employee dismissed after reporting safety violations,Needs more evidence,Low
+Custody dispute over minor child after divorce,Needs more evidence,Low
+License suspension due to repeated traffic violations,Settled,Medium
+Notice to vacate issued due to non-payment of utility bills,Settled,Medium
+Spouse seeking divorce settlement and alimony,Settled,Low
+Employee terminated without notice after filing a harassment complaint,Won,High
+Spouse seeking divorce settlement and alimony,Dismissed,Medium
+Parent requesting visitation rights,Won,High
+Traffic fine contested citing medical emergency,Settled,Low
+Illegal eviction notice issued without prior warning,Won,High
+Appeal for dismissal of red-light violation ticket,Settled,High
+License suspension due to repeated traffic violations,Won,Medium
+Traffic fine contested citing medical emergency,Won,High
+Request for restraining order due to domestic violence,Dismissed,Medium
+Driver issued speeding ticket and appeals for dismissal,Won,Medium
+Employee fired for refusing overtime without compensation,Needs more evidence,Low
+Driver issued speeding ticket and appeals for dismissal,Won,High
+Employee fired for refusing overtime without compensation,Settled,Low
+Wrongful termination suit filed after being laid off,Won,Low
+Buyer claims damages after contractor abandoned project,Won,Low
+Job terminated for poor performance without prior warning,Settled,High
+Employee dismissed after reporting safety violations,Needs more evidence,Low
+Employee terminated without notice after filing a harassment complaint,Settled,Medium
+Request for restraining order due to domestic violence,Dismissed,Medium
+Custody dispute over minor child after divorce,Dismissed,High
+Service provider failed to comply with contractual obligations,Dismissed,Medium
+Wrongful termination suit filed after being laid off,Dismissed,High
+Job terminated for poor performance without prior warning,Needs more evidence,High
+Tenant received eviction notice for unpaid rent of three months,Settled,Medium
+Petition for modification of child custody agreement,Settled,High
+Appeal for dismissal of red-light violation ticket,Settled,Low
+Petition for modification of child custody agreement,Won,High
+Landlord threatens eviction after dispute over damages,Needs more evidence,Low
+Breach of service agreement due to delayed delivery,Dismissed,High
+Fine issued for parking violation near restricted zone,Settled,High
+Tenant facing eviction because of late rent payments during pandemic,Won,High
+Fine issued for parking violation near restricted zone,Needs more evidence,Low
+Tenant received eviction notice for unpaid rent of three months,Settled,Medium
+Landlord threatens eviction after dispute over damages,Won,High
+Tenant facing eviction because of late rent payments during pandemic,Settled,Low
+Breach of contract for rental agreement,Dismissed,Low
+Service provider failed to comply with contractual obligations,Settled,Medium
+Illegal eviction notice issued without prior warning,Dismissed,High
+Supplier failed to deliver goods as per contract terms,Dismissed,High
+Breach of contract for rental agreement,Dismissed,Medium
+Breach of service agreement due to delayed delivery,Dismissed,Medium
+Notice to vacate issued due to non-payment of utility bills,Needs more evidence,Low
+Supplier failed to deliver goods as per contract terms,Settled,High
+Buyer claims damages after contractor abandoned project,Dismissed,Medium
+Parent requesting visitation rights,Needs more evidence,Medium
